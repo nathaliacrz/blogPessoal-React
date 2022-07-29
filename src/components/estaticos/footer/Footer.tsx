@@ -11,22 +11,22 @@ function Footer() {
         <>
             <Grid>
                 <Grid alignItems="center" item xs={12}>
-                    <Box  style={{ backgroundColor: "#621214", height: "30px", paddingTop: "10px" }}>
+                    <Box className="box1">
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="https://www.instagram.com/tthanalia/" target="_blank">
-                                <InstagramIcon style={{ fontSize: 30, color: "white" }} />
+                                <InstagramIcon className="redes" />
                             </a>
                             <a href="https://www.linkedin.com/in/nathaliacrz/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 30, color: "white" }} />
+                                <LinkedInIcon className="redes" />
                             </a>
                             <a href="https://www.github.com/nathaliacrz/" target="_blank">
-                                <GithubIcon style={{ fontSize: 25, color: "white" }} />
+                                <GithubIcon className="redes-github" />
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ backgroundColor: "#621214", height: "30px" }}>
+                    <Box className="box2">
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >Nathalia Cruz Santos - Blog Pessoal © 2022</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className="texto" >Nathalia Cruz Santos - Blog Pessoal © 2022</Typography>
                         </Box>
                         
                     </Box>
