@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@700&display=swap');
+
 .cursor{
     cursor: pointer;
-    color: white;
+    color: white!important;
+    text-decoration: none!important;
+}
+
+.home-fonte{
+    font-family:  'Sarala', sans-serif !important;
 }
 
 .text-decorator-none{
     text-decoration: none;
+}
+
+.cor{
+    background-color: #a333e2!important;
 }

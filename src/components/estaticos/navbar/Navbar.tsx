@@ -9,12 +9,15 @@ export default function Navbar() {
 
     return (
         <>
-            <AppBar position="static" style={{ backgroundColor: "#621214" }}>
+            <AppBar className='cor'>
                 <Toolbar variant="dense" style={{ display: "flex", justifyContent: "space-between" }}>
-                    <Box className='cursor' mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
+                    <Box mx={1} style={{ cursor: "pointer" }}>
+                    <Link to='/home' className='cursor' >
+                        <Typography variant="h6" color="inherit" className='home-fonte'>
                             Home
                         </Typography>
+                        </Link>
+                   
                     </Box>
 
                     <Box display="flex">

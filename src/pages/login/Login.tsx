@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom'
 
 import './Login.css';
 
-
 function Login() {
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid className='box-form' container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
-                <Box paddingX={20}>
+                <Box  paddingX={20}>
                     <form>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className="textos">
                             Entrar
@@ -19,7 +18,7 @@ function Login() {
                         <TextField id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/home' className='text-decorator-none'>
-                                <Button type='submit' variant='contained' color='primary' style={{ borderColor: "white", borderRadius: "20px", backgroundColor: "#bf6164", color: "white" }}>
+                                <Button type='submit' variant='contained' color='primary' style={{ borderColor: "white", borderRadius: "20px", backgroundColor: "#a333e2", color: "white" }}>
                                     Logar
                                 </Button>
                             </Link>
