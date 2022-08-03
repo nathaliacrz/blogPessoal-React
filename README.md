@@ -1,48 +1,32 @@
-# Getting Started with Create React App
+# Blog Pessoal - Nathalia Cruz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![url](https://www.impacta.com.br/blog/wp-content/uploads/2018/09/trabalho_designer.jpg)
 
-## Available Scripts
+------------------------------------------------
+### `Sobre:`
 
-In the project directory, you can run:
+O objetivo principal desse site é que os usuarios postem todas as coisas que gostam, independente do que seja. <br>
+Compartilhe conteúdos da área tech, esportes, culinária, cultura, tudo que você desejar!!
+Neste site você terá:
 
-### `npm start`
+### `Cadastro e Login:`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Utilize seu e-mail, senha e nome de usuário para não perder os seus posts!!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Temas:`
 
-### `npm test`
+Lembre-se de postar no tema certo para que tenhamos um site mais fácil, organizado e divertido de ser utilizado!
+Após realizar o seu cadastro, caso não encontre o tema que deseja postar sobre, você poder adicionar o tema desejado.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Postagens:`
+Você pode colocar um titulo, adicionar a um tema, e escrever o que vier a mente!!!Caso ainda não queira postar fique a vontade para apenas ver o que foi postado 😁. É possível selecionar todas as postagens que você deseja ver por meio de um tema específico. Caso não tenha preferência por algum tema também é possivel ver todas as postagens já feitas.
 
-### `npm run build`
+**Status de conclusão do Projeto**: 67%.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+----------------------------------------------------
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Link:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Você pode ver como está o Blog Pessoal **em breve**.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# blogPessoa-React
-# blogPessoal-React
+Espero que goste!!!
