@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { Box } from '@mui/material';
 
 function ListaTema() {
   const [temas, setTemas] = useState<Tema[]>([])
@@ -17,7 +18,7 @@ function ListaTema() {
   );
 
   useEffect(()=>{
-    if(token == ''){
+    if(token === ''){
       toast.error('Você precisa estar logado', {
         position: "top-right",
         autoClose: 2000,
@@ -57,7 +58,7 @@ function ListaTema() {
               Tema
             </Typography>
             <Typography variant="h5" component="h2">
-             {tema.descricao}
+             {tema.nome}
             </Typography>
           </CardContent>
           <CardActions>
