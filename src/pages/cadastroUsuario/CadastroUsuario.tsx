@@ -1,8 +1,7 @@
 import React, {useState, useEffect, ChangeEvent} from 'react';
 import { Box } from '@mui/material';
 import { Button, Grid, TextField, Typography } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { cadastroUsuario } from '../../services/Service'
 import User from '../../models/User';
 import './CadastroUsuario.css';
@@ -27,11 +26,11 @@ function CadastroUsuario() {
             senha: ''
         })
 
-        useEffect(() => {
-            if (userResult.id !== 0) {
-                navigate("/login")
-            }
-        }, [userResult])
+    useEffect(() => {
+        if (userResult.id !== 0) {
+            navigate("/login")
+        }
+    }, [userResult])
 
 
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
@@ -57,7 +56,7 @@ function CadastroUsuario() {
         }
     }
     return (
-        <Grid className='box-form2' container direction='row' justifyContent='center' alignItems='center'>
+        <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} className='imagem2'>
 
             </Grid>
