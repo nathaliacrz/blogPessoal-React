@@ -56,7 +56,7 @@ function CadastroUsuario() {
         }
     }
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid container direction='row' justifyContent='center' alignItems='center' className='cor-fundo'>
             <Grid item xs={6} className='imagem2'>
 
             </Grid>
@@ -73,13 +73,13 @@ function CadastroUsuario() {
 
                             <Box marginTop={2} textAlign='center'>
                                 <Link to='/login' className='text-decorator-none'>
-                                    <Button variant='contained' color='primary' className='btnCancelar'style={{ borderColor: "white", borderRadius: "20px", backgroundColor: "#a333e2", color: "white" }}>
+                                    <Button variant='contained' color='primary' className='btnCancelar botoes'>
                                         Cancelar
                                     </Button>
                                 </Link>
 
                                 
-                                    <Button type='submit' variant='contained' color='primary' style={{ borderColor: "white", borderRadius: "20px", backgroundColor: "#a333e2", color: "white" }}>
+                                    <Button type='submit' variant='contained' color='primary' className='botoes'>
                                         Cadastrar
                                     </Button>
                             

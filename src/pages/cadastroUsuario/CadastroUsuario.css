@@ -1,16 +1,32 @@
+.botoes{
+    border-color: white !important;
+    border-radius: 20px !important;
+    background-color: #a333e2 !important;
+    color: white !important;    
+}
+
+.botoes:hover{
+    background-color: #daadf3 !important;
+}
+
 .textos2{
     font-weight: bold !important;
 }
 
 .imagem2{
-    background-image: url(https://elements-video-cover-images-0.imgix.net/files/9bb1410f-3f76-4c67-8c1b-e8093ff38428/inline_image_preview.jpg?auto=compress%2Cformat&fit=min&h=450&w=800&s=64c2231cd2d4c1923b0fb48bdd94f25b);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4651/4651958.png);
     background-repeat: no-repeat;
     width: 100vh;
     height: 100vh;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 
 .btnCancelar{
-    margin-right: 20px !important;
+    margin-right: 20px !important; 
 }
+
+.cor-fundo{
+    background-color: #faf9f6;
+}
+

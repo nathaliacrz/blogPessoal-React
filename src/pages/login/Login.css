@@ -2,12 +2,23 @@
     font-weight: bold !important;
 }
 
+.botao{
+    border-color: white;
+    border-radius: 20px;
+    background-color: #a333e2;
+    color: white;
+}
+
+.botao:hover{
+    background-color: #daadf3 !important;
+}
+
 .imagem{
-    background-image: url(https://elements-video-cover-images-0.imgix.net/files/9bb1410f-3f76-4c67-8c1b-e8093ff38428/inline_image_preview.jpg?auto=compress%2Cformat&fit=min&h=450&w=800&s=64c2231cd2d4c1923b0fb48bdd94f25b);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4651/4651962.png);
     background-repeat: no-repeat;
     width: 100vh;
     height: 100vh;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 
@@ -16,5 +27,7 @@
 }
 
 .box-form{
-    background-color: #f3eee0;
+    background-color: #faf9f6;
 }
+
+

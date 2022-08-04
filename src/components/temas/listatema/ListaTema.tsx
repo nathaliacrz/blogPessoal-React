@@ -8,7 +8,7 @@ function ListaTema() {
 
     return (
       <>
-        <Box m={2} >
+        <Box m={2} p={10} >
           <Card variant="outlined">
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -23,14 +23,14 @@ function ListaTema() {
   
                 <Link to="" className="text-decorator-none">
                   <Box mx={1}>
-                    <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                    <Button variant="contained" className="marginLeft botao-atualizar" size='small' color="primary" >
                       atualizar
                     </Button>
                   </Box>
                 </Link>
                 <Link to="" className="text-decorator-none">
                   <Box mx={1}>
-                    <Button variant="contained" size='small' color="secondary">
+                    <Button variant="contained" size='small' color="secondary" className='botao-deletar'>
                       deletar
                     </Button>
                   </Box>

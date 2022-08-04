@@ -1,0 +1,10 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.botao-cadastrar{
+    border-color: white !important;
+    border-radius: 20px !important;
+    background-color: #a333e2 !important;
+    color: white !important;    
+}

@@ -1,3 +1,15 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.botao-atualizar{
+    border-color: white !important;
+    border-radius: 20px !important;
+    background-color: #a333e2 !important;
+    color: white !important;    
+}
+
+.botao-deletar{
+    border-radius: 20px !important;
+    background-color: #c5a1da !important;
+}
