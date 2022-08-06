@@ -6,18 +6,18 @@
 }
 
 .titulo{
-    color: #511971 !important;
+    color: #52301b !important;
     font-weight: bold !important;
 }
 
 .titulo-principal{
         font-family: 'Inconsolata', monospace!important;
-        color: #511971 !important;
+        color: #52301b !important;
 }
 
 .botao{
     border-color: white !important;
-    background-color: #a333e2 !important;
+    background-color: #764d34 !important;
     color: white !important;
     border-radius: 20px !important;
 }

@@ -21,18 +21,18 @@ export default function Navbar() {
     return (
         <>
             <AppBar className='cor'>
-                <Toolbar variant="dense" style={{ display: "flex", justifyContent: "space-between" }}>
-                    <Box mx={1} style={{ cursor: "pointer", display: 'flex', gap: '20px', alignItems: 'center' }}>
+                <Toolbar variant="dense" style={{ display: "flex", justifyContent: "space-between"}}>
+                    <Box mx={1} style={{ cursor: "pointer", display: 'flex', gap: '20px', alignItems: 'center', paddingLeft: '100px' }}>
                         <Link to='/home' className='cursor' >
                             <HomeIcon />
                         </Link>
 
                         <Typography color="inherit" font-size="5px">
-                            Blog Pessoal
+                           PlayWithME
                         </Typography>
                     </Box>
 
-                    <Box display="flex">
+                    <Box display="flex" style={{paddingRight: '100px'}}>
 
                         <Link to='/posts' className='cursor'>
                             <Box className='cursor' mx={1}>

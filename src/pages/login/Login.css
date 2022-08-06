@@ -1,24 +1,35 @@
 .textos{
     font-weight: bold !important;
+    
+}
+
+.box{
+    background-color: #a47050;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important; 
+    border-radius: 150px!important; 
+    color: white!important;
+    margin-left: 20px;
+    margin-right: 20px; 
 }
 
 .botao{
     border-color: white;
     border-radius: 20px;
-    background-color: #a333e2;
+    background-color: #52301b!important;
     color: white;
 }
 
 .botao:hover{
-    background-color: #daadf3 !important;
+    background-color: #495520!important;
 }
 
 .imagem{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/4651/4651962.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/7295/7295106.png);
     background-repeat: no-repeat;
     width: 100vh;
     height: 100vh;
-    background-size: auto;
+    background-size: 90%;
     background-position: center;
 }
 
