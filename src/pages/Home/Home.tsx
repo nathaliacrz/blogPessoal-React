@@ -4,20 +4,23 @@ import { Box } from '@mui/material';
 import './Home.css';
 import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
-import { useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 
 function Home() {
 
-  let navigate = useNavigate() 
-  const [token, setToken] = useLocalStorage('token');
+  let navigate = useNavigate()
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
-    useEffect(() => {
-        if (token == "") {
-            alert("Você precisa estar logado")
-            navigate("/login")
-        }
-    }, [token])
+  useEffect(() => {
+    if (token == "") {
+      alert("Você precisa estar logado")
+      navigate("/login")
+    }
+  }, [token])
 
   return (
     <>
@@ -34,9 +37,12 @@ function Home() {
           </Box>
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}>
-              <ModalPostagem/>
+              <ModalPostagem />
             </Box>
-            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+            <Link to="/posts">
+              <Button variant="outlined" className='botao'>Ver Postagens</Button>
+            </Link>
+
           </Box>
         </Grid>
 
@@ -48,6 +54,6 @@ function Home() {
       </Grid>
     </>
   )
-  }
+}
 
 export default Home
