@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { cadastroUsuario } from '../../services/Service'
 import User from '../../models/User';
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
 
@@ -46,15 +47,57 @@ function CadastroUsuario() {
         })
 
     }
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if(confirmarSenha === user.senha){
-        cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-       alert('Usuario cadastrado com sucesso.')
-        }else{
-           alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+        if (confirmarSenha == user.senha && user.senha.length >= 8) {
+    
+          try {
+            await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
+            if(confirmarSenha === user.senha){
+                cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+                toast.success('🦄 Ta cadastrade tchutchucone', {
+                    position: "top-left",
+                    autoClose: 1999,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    theme: "colored",
+                    progress: undefined,
+                    });
+                }
+          } catch (error) {
+            console.log(`Error: ${error}`);
+    
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.', {
+                position: "top-left",
+                autoClose: 3999,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "colored",
+                progress: undefined,
+                });
+          }
+    
+        } else {
+            toast.error('A senha deve conter no mínimo 8 caracteres.', {
+                position: "top-left",
+                autoClose: 3999,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "colored",
+                progress: undefined,
+                });
+    
+          setUser({ ...user, senha: "" });
+          setConfirmarSenha("");
         }
-    }
+      }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center' className='cor-fundo'>
             <Grid item xs={6} className='imagem2'>

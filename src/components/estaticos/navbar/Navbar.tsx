@@ -20,21 +20,30 @@ function Navbar() {
 
     function goLogout() {
         dispatch(addToken(''))
-        alert("Deslogando... Tchau, mô!")
+        toast.success('🦄 Tchau tchucthucone!', {
+            position: "bottom-left",
+            autoClose: 1999,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored",
+            progress: undefined,
+            });
         navigate('/login')
     }
 
     var navbarComponent;
 
     if (token != "") {
-        navbarComponent = <AppBar className='cor'>
+        navbarComponent = <AppBar  className='cor'>
             <Toolbar variant="dense" style={{ display: "flex", justifyContent: "space-between" }}>
-                <Box mx={1} style={{ cursor: "pointer", display: 'flex', gap: '20px', alignItems: 'center', paddingLeft: '100px' }}>
+                <Box mx={1} className="estilo-barra">
                     <Link to='/home' className='cursor' >
                         <HomeIcon />
                     </Link>
 
-                    <Typography color="inherit" font-size="5px">
+                    <Typography className="cursor" font-size="20px">
                         PlayWithME
                     </Typography>
                 </Box>
@@ -51,7 +60,7 @@ function Navbar() {
 
                     <Link to='/temas' className='cursor'>
                         <Box className='cursor' mx={1}>
-                            <Typography font-size="5px" color="inherit">
+                            <Typography font-size="50px" color="inherit">
                                 Temas
                             </Typography>
                         </Box>

@@ -8,6 +8,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function DeletarPostagem() {
   let history = useNavigate();
@@ -19,7 +20,16 @@ function DeletarPostagem() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado")
+      toast.warning('Você precisa estar logado.', {
+        position: "top-center",
+        autoClose: 5999,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+        progress: undefined,
+        });
       history("/login")
 
     }
@@ -46,7 +56,17 @@ function DeletarPostagem() {
         'Authorization': token
       }
     });
-    alert('Postagem deletada com sucesso');
+    toast.success('Postagem deletada, apagado, guardado a 7 palmos do chão, boa!!', {
+      position: "top-left",
+      autoClose: 1999,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+      progress: undefined,
+      });
+ 
   }
 
   function nao() {

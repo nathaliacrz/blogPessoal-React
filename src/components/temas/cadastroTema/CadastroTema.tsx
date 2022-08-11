@@ -6,6 +6,7 @@ import { buscaId, post, put } from '../../../services/Service';
 import './CadastroTema.css';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function CadastroTema() {
     let history = useNavigate();
@@ -21,7 +22,16 @@ function CadastroTema() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
+            toast.warning('Você precisa estar logado.', {
+                position: "top-center",
+                autoClose: 5999,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "colored",
+                progress: undefined,
+                });
             history("/login")
 
         }
@@ -61,14 +71,32 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            alert('Tema atualizado com sucesso');
+            toast.success('Tema atualizado, boa!!', {
+                position: "top-left",
+                autoClose: 1999,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "colored",
+                progress: undefined,
+                });
         } else {
             post(`/tema`, tema, setTema, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Tema cadastrado com sucesso');
+            toast.success('Tema cadastrado, gostei desse!!', {
+                position: "top-left",
+                autoClose: 1999,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "colored",
+                progress: undefined,
+                });
         }
         back()
 

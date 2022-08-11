@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
-import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service';
 import './ListaPostagem.css';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function ListaPostagem() {
 
@@ -20,7 +20,16 @@ function ListaPostagem() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado")
+      toast.warning('Você precisa estar logado.', {
+        position: "top-center",
+        autoClose: 5999,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+        progress: undefined,
+        });
       navigate("/login")
 
     }

@@ -15,15 +15,19 @@ import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 function App() {
   return (
     <>
     <Provider store={store}>
+      <ToastContainer />
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/cadastro" element={<CadastroUsuario />} />
