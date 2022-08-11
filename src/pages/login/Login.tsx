@@ -69,32 +69,34 @@ function Login() {
 
     return (
         <Grid className='box-form' container direction='row' justifyContent='center' alignItems='center'>
-            <Grid alignItems='center' xs={6}>
-                <Box paddingX={20} className='box'>
+            <Grid alignItems='center' xs={4}>
+                <Box paddingX={20} className='box box-principal'>
                     <form onSubmit={onSubmit} className='box'>
                         <Typography style={{ color: 'white' }} variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className="textos">
-                            Entrar
+                            LOGIN
                         </Typography>
-                        <TextField style={{ backgroundColor: 'white' }} value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField style={{ backgroundColor: 'white' }} value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField style={{ backgroundColor: 'white' }} value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Email' variant='outlined' name='usuario' margin='normal' fullWidth />
+                        <TextField style={{ backgroundColor: 'white' }} value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                             <Button type='submit' variant='contained' color='primary' className='botao'>
-                                Logar
+                                Login
                             </Button>
+                            <b className="form-ou"> OU</b>
+                            <Link to='/cadastro'>
+                                <Button type='submit' variant='contained' color='primary' className='botao'>
+                               Cadastre-se
+                            </Button>
+                            </Link>
                         </Box>
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
-                        </Box>
-                        <Link to='/cadastro'>
-                            <Typography variant='subtitle1' gutterBottom align='center' className="textos text-decorator-none">Cadastre-se</Typography>
-                        </Link>
+                        
+                           
                     </Box>
                 </Box>
             </Grid>
 
-            <Grid xs={6} className="imagem">
+            <Grid xs={8} className="imagem">
 
             </Grid>
         </Grid>
