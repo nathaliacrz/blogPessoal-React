@@ -13,23 +13,24 @@
     font-weight: bold !important;
 }
 
-.box{
-    background-color: #a47050;
+.box3{
+    background-color: rgb(184, 170, 142)!important;
     padding-top: 20px!important;
     padding-bottom: 20px!important; 
     border-radius: 150px!important; 
     color: white!important;
     margin-left: 20px;
     margin-right: 20px; 
+    border: #52301b solid;
 }
 
 .imagem2{
-    background-image: url(https://cdn-icons-png.flaticon.com/512/7295/7295298.png);
+    background-image: url(https://i.imgur.com/TitqlYy.png);
     background-repeat: no-repeat;
     width: 100vh;
     height: 100vh;
-    background-size: 90%;
-    background-position: center;
+    background-size: 100%;
+    background-position: cover;
 }
 
 .btnCancelar{
@@ -40,3 +41,9 @@
     background-color: #faf9f6;
 }
 
+.alinhar-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 500px;
+}
