@@ -17,11 +17,12 @@
     background-color: rgb(184, 170, 142)!important;
     padding-top: 20px!important;
     padding-bottom: 20px!important; 
-    border-radius: 150px!important; 
+    border-radius: 50px!important; 
     color: white!important;
     margin-left: 20px;
     margin-right: 20px; 
     border: #52301b solid;
+    width: 500px;
 }
 
 .imagem2{
