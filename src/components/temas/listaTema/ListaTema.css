@@ -1,0 +1,23 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.botao-atualizar{
+    border-color: white !important;
+    border-radius: 20px !important;
+    background-color: #52301b !important;
+    color: white !important;    
+}
+
+.botao-atualizar:hover{
+    background-color: #945b38 !important;
+}
+
+.botao-deletar{
+    border-radius: 20px !important;
+    background-color: #98260c !important;
+}
+
+.botao-deletar:hover{
+    background-color: #d84c2d !important;
+}
