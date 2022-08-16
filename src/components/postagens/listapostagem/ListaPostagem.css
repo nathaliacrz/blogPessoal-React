@@ -1,0 +1,25 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.botao-cadastrar{
+    border-color: white !important;
+    border-radius: 20px !important;
+    background-color: #52301b !important;
+    color: white !important;    
+}
+
+.botao-cadastrar:hover{
+    background-color: #945b38 !important;
+}
+
+.botao-apagar{
+    border-color: white !important;
+    border-radius: 20px !important;
+    background-color: #98260c !important;
+    color: white !important;  
+}
+
+.botao-apagar:hover{
+    background-color: #d84c2d !important;
+}

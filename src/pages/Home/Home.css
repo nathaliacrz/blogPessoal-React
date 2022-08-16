@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+.caixa{
+    background-color: #faf9f6;
+    min-height: 100vh;
+}
+
+.titulo{
+    color: #52301b !important;
+    font-weight: bold !important;
+}
+
+.titulo-principal{
+        font-family: 'Inconsolata', monospace!important;
+        color: #52301b !important;
+}
+
+.botao{
+    border-color: white !important;
+    background-color: #764d34 !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+
+.postagens{
+    background-color: white;
+}
