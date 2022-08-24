@@ -1,11 +1,12 @@
 import React, {useState, useEffect, ChangeEvent} from 'react';
-import { Box } from '@mui/material';
+import { Box, InputAdornment } from '@mui/material';
 import { Button, Grid, TextField, Typography } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import { cadastroUsuario } from '../../services/Service'
 import User from '../../models/User';
 import './CadastroUsuario.css';
 import { toast } from 'react-toastify';
+import { AccountCircle, Mail, VpnKey } from '@material-ui/icons';
 
 function CadastroUsuario() {
 
@@ -109,10 +110,78 @@ function CadastroUsuario() {
                             <Typography style={{color: '#52301b'}}variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className="textos2">
                                 CADASTRE-SE
                             </Typography>
-                            <TextField  style={{backgroundColor: 'white'}} value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
-                            <TextField style={{backgroundColor: 'white'}} value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Email' variant='outlined' name='usuario' margin='normal' fullWidth />
-                            <TextField style={{backgroundColor: 'white'}} value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-                            <TextField style={{backgroundColor: 'white'}} value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+                            <TextField  style={{backgroundColor: 'white'}} 
+                            value={user.nome} 
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} 
+                            id='nome' 
+                            label='Nome' 
+                            variant='outlined' 
+                            name='nome' 
+                            margin='normal' 
+                            fullWidth
+                            required
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <AccountCircle />
+                                    </InputAdornment>
+                                ),
+                            }}
+                            />
+                            <TextField style={{backgroundColor: 'white'}} 
+                            value={user.usuario} 
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} 
+                            id='usuario' 
+                            label='Email' 
+                            variant='outlined' 
+                            name='usuario' 
+                            margin='normal' 
+                            fullWidth
+                            required
+                            inputProps={{minLength: 8,maxLength: 50}}
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <Mail />
+                                    </InputAdornment>
+                                ),
+                            }} />
+                            <TextField style={{backgroundColor: 'white'}} 
+                            value={user.senha} 
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} 
+                            id='senha' 
+                            label='Senha' 
+                            variant='outlined' 
+                            name='senha' 
+                            margin='normal' 
+                            type='password' 
+                            fullWidth 
+                            required
+                            inputProps={{minLength: 8,maxLength: 50}}
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <VpnKey />
+                                    </InputAdornment>
+                                ),
+                            }}/>
+                            <TextField style={{backgroundColor: 'white'}} 
+                            value={confirmarSenha} 
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
+                            id='confirmarSenha' 
+                            label='Confirmar Senha' variant='outlined' name='confirmarSenha' 
+                            margin='normal' 
+                            type='password' 
+                            fullWidth 
+                            required
+                            inputProps={{minLength: 8,maxLength: 50}}
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <VpnKey />
+                                    </InputAdornment>
+                                ),
+                            }}/>
 
                             <Box marginTop={2} textAlign='center'>
                                 <Link to='/login' className='text-decorator-none'>

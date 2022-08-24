@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/actions';
 import './Login.css';
 import { toast } from 'react-toastify';
-import { AccountCircle, VpnKey } from '@material-ui/icons';
+import { Mail, VpnKey } from '@material-ui/icons';
 
 
 function Login() {
@@ -90,7 +90,7 @@ function Login() {
                                 InputProps={{
                                     startAdornment: (
                                         <InputAdornment position="start">
-                                            <AccountCircle />
+                                            <Mail />
                                         </InputAdornment>
                                     ),
                                 }}/>
@@ -119,7 +119,7 @@ function Login() {
                                 Login
                             </Button>
                             <b className="form-ou"> OU</b>
-                            <Link to='/cadastro'>
+                            <Link className='text-decoration-none' to='/cadastro'>
                                 <Button type='submit' variant='contained' color='primary' className='botao'>
                                Cadastre-se
                             </Button>
