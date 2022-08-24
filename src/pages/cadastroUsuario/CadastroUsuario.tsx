@@ -103,7 +103,7 @@ function CadastroUsuario() {
             <Grid item xs={12} className='imagem2 alinhar-box'>
 
             
-            <Grid item xs={6} alignItems='center'>
+            <Grid item xs={6} alignItems='center' className='alinhar-box'>
                 <Box padding={10} className='box3'>
                         <form onSubmit={onSubmit}>
                             <Typography style={{color: '#52301b'}}variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className="textos2">
